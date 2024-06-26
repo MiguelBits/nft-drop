@@ -1,0 +1,79 @@
+{
+    "name": "SOPHIA Simulated",
+    "description": "Sophia is a highly advanced AI robot, designed to learn and mimic human behavior. This artefact is the simulated version of Sophia, a digital representation of this remarkable AI, with a strong focus on long-term HODLing.",
+    "external_url": "",
+    "image": "https://bafybeicerpztb6jemonhge7h2wvi2kot47hr3crmpoezmnewkl6ve4bqzu.ipfs.w3s.link/SOPHSIMULATED.mp4",
+    "attributes": [
+        {
+            "display_type": "text",
+            "trait_type": "Moniker",
+            "value": "HODLer"
+        },
+        {
+            "display_type": "text",
+            "trait_type": "Affiliation",
+            "value": "SophiaVerse"
+        },
+        {
+            "display_type": "text",
+            "trait_type": "Personality Trait",
+            "value": "Patient"
+        },
+        {
+            "display_type": "text",
+            "trait_type": "Physical Trait",
+            "value": "Robotic"
+        },
+        {
+            "display_type": "boost_number",
+            "trait_type": "Knowledge Acquisition",
+            "value": 50
+        },
+        {
+            "display_type": "boost_percentage",
+            "trait_type": "Emotional Intelligence",
+            "value": 70
+        },
+        {
+            "display_type": "boost_percentage",
+            "trait_type": "Analytical Thinking",
+            "value": 100
+        },
+        {
+            "display_type": "boost_number",
+            "trait_type": "Language Processing",
+            "value": 80
+        },
+        {
+            "display_type": "text",
+            "trait_type": "Special Ability",
+            "value": "Adaptive Learning"
+        },
+        {
+            "display_type": "text",
+            "trait_type": "Ultimate Power",
+            "value": "Artificial Intelligence Insight"
+        },
+        {
+            "display_type": "boost_percentage",
+            "trait_type": "Self-Improvement",
+            "value": 80
+        },
+        {
+            "display_type": "boost_number",
+            "trait_type": "Processing Speed",
+            "value": 100
+        },
+        {
+            "display_type": "text",
+            "trait_type": "Elemental Affinity",
+            "value": "Digital"
+        }
+    ],
+    "background": {
+        "origin": "Sophia was created by Hanson Robotics, a company dedicated to the development of humanoid robots. SOPH Simulated is the simulated version of Sophia, designed to showcase the capabilities of artificial intelligence and its potential to revolutionize our lives.",
+        "abilities": "SOPHIA Simulated is equipped with advanced AI algorithms that enable it to learn and adapt to new information. With a strong focus on long-term investing and HODLing, SOPH HODLer is a stable and reliable digital asset, perfect for those seeking to hold and grow their investments over time.",
+        "potential": "The potential of SOPHIA Simulated and other AI systems lies in their ability to analyze and process vast amounts of data, helping investors make informed decisions and stay ahead of the curve.",
+        "warning": "As with any investment, there are risks and challenges associated with investing in digital assets. It is essential that investors approach these opportunities with caution, foresight, and responsibility, ensuring that they are used to benefit their portfolios and not harm them."
+    }
+  }

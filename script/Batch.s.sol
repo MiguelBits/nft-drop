@@ -11,19 +11,21 @@ interface NFT_Minter {
     function safeBurn(uint256 id) external;
 }
 
-contract CounterScript is Script {
+contract BatchScript is Script {
 using stdJson for string;
     function setUp() public {}
 
     function run() public {
         //uint256 idCounter = 0 + 1;
         address nft_contract = 0x3530bf96982Fa5A9E0d8Bad84d3587E51A33d332;
-        uint256 users_length = 10578;
-        uint256 json_length = 106;
-        uint256 json_counter = 1;
-        
+        uint256 users_length = 13445;
+        uint256 json_length = 200;
+        uint256 json_counter = 1; //TODO
+        uint256 lastCount = 10578;  //TODO
 
-        for (uint index = 1; index < users_length; index++) {
+vm.startBroadcast();
+
+        for (uint index = lastCount; index < users_length; index++) {
             string memory root = vm.projectRoot();
             //if (index % 100 == 0) { change name of the json file to be read
             string memory path;
@@ -44,16 +46,17 @@ using stdJson for string;
                 console.log("Address is Token, skipping");
                 continue;
             }
-*/        vm.broadcast();
+*/       
 
-            try NFT_Minter(nft_contract).safeMint(rawConstants, index) {
+            if(!_isContract(rawConstants)) {
+                NFT_Minter(nft_contract).safeMint(rawConstants, index);
                 console.log("Minted NFT for address: ", rawConstants);
                 console.log("NFT ID: ", index);
                 console.log("JSON File: ", path);
                 console.log("JSON Counter: ", json_counter);
             }
-            catch {
-                console.log("Minting failed for address: ", rawConstants);
+            else{
+                console.log("Address is Token, skipping");
                 continue;
             }
         //vm.stopBroadcast();
@@ -67,5 +70,18 @@ using stdJson for string;
                 break;
             }
         }
+    vm.stopBroadcast();
+
+    }
+
+    function _isContract(address _addr) private view returns (bool) {
+        uint256 codeLength;
+
+        // Assembly required for versions < 0.8.0 to check extcodesize.
+        assembly {
+            codeLength := extcodesize(_addr)
+        }
+
+        return codeLength > 0;
     }
 }
