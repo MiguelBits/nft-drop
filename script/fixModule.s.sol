@@ -28,19 +28,19 @@ contract FixScript is Script {
         //uint256 idCounter = 0 + 1;
         address nft_contract = 0xcB841a28f16f99e3A561dbEbA7e09abc9120a45f;
         //_burn(nft_contract);
-        _mint(nft_contract, "/drops/d1_holders_output_BSC.json");
+        _mint(nft_contract, "/drops/FIX_d1_holders_output_POLY.json");
 
     }
 
     function _mint(address nft_contract, string memory _path) public {
 
-        uint256 completeJSON = 1195; //TODO
+        uint256 completeJSON = 789; //TODO
 
         uint256 users_length = completeJSON; //TODO
 
         uint256 json_lastCount = 1;  // can stay the same because we check quantity of NFTs minted
 
-        uint256 last_onChain_index_minted = 11777; //TODO
+        uint256 last_onChain_index_minted = 17659; //TODO
 
         console.log("json_lastCount: ", completeJSON - json_lastCount);
 
