@@ -15,7 +15,7 @@ interface NFT_Minter {
 contract DropScript is Script {
 using stdJson for string;
     function setUp() public {}
-
+/*
     function run() public {
         //uint256 idCounter = 0 + 1;
         address nft_contract = 0x3530bf96982Fa5A9E0d8Bad84d3587E51A33d332;
@@ -46,7 +46,7 @@ vm.startBroadcast();
             }
 */          
 //if isContract(rawConstants) {
-
+/*
             if(!_isContract(rawConstants) && NFT_Minter(nft_contract).balanceOf(rawConstants) == 0){
                 try(NFT_Minter(nft_contract).safeMint(rawConstants, index)){
                 console.log("Minted NFT for address: ", rawConstants);
@@ -68,7 +68,7 @@ vm.startBroadcast();
 vm.stopBroadcast();
     }
 
-
+*/
     function _isContract(address _addr) private view returns (bool) {
         uint256 codeLength;
 

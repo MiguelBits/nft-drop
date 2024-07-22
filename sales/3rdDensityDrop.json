@@ -1,0 +1,34 @@
+{
+    "1": {
+        "address": "0x96706EB471F875a9a41442f358d3B34ba02F868b",
+        "quantity": 10
+    },
+    "2": {
+        "address": "0xc5fc55C9d70775A832ccAb580cb59217C3740516",
+        "quantity": 284
+    },
+    "3": {
+        "address": "0xf3975E2e8f442DE0EC71DA6579a0206778bb3F8E",
+        "quantity": 10
+    },
+    "4": {
+        "address": "0x1288e0802Aa5f51457Afd0Fa5A16f4EfDB7bF88E",
+        "quantity": 1
+    },
+    "5": {
+        "address": "0xA52899A1A8195c3Eef30E0b08658705250E154aE",
+        "quantity": 1
+    },
+    "6": {
+        "address": "0xf138b002f7f514936873081B9DfA56672cdAe42B",
+        "quantity": 1
+    },
+    "7": {
+        "address": "0x7AED610F9a2675f701A4f7E557737D03Ceab0335",
+        "quantity": 1
+    },
+    "8": {
+        "address": "0xa5EC59B9575f0310686A33991112CbE3aCA0CF76",
+        "quantity": 1
+    }
+}
