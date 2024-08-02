@@ -14,25 +14,25 @@ interface NFT_Minter {
 contract tURKEYScript is Script {
     using stdJson for string;
 
-    NFT_Minter MINTER = NFT_Minter(0x98d722E1963C823d06F43d4294320B47Aa761041);
+    NFT_Minter MINTER = NFT_Minter(0x913b55d1ad953B9D7fe2f78Ff844ADDd74CEeF3f);
     uint256 season = 1;
-    uint256 density = 1; //TODO
+    uint256 density = 0; //TODO
 
     function setUp() public {}
 
     function run() public {
 
-        _mint("/sales/BaseDensityDrop.json"); //TODO
+        _mint("/sales/peace.json"); //TODO
 
     }
 
     function _mint(string memory _path) public {
 
-        uint256 completeJSON = 21; //TODO
+        uint256 completeJSON = 1; //TODO
 
         uint256 users_length = completeJSON; //TODO
 
-        uint256 json_lastCount = 10;  // can stay the same because we check quantity of NFTs minted
+        uint256 json_lastCount = 5;  // can stay the same because we check quantity of NFTs minted
 
         string memory root = vm.projectRoot();
         string memory path;
@@ -52,8 +52,7 @@ contract tURKEYScript is Script {
 
             vm.broadcast();
             MINTER.batchMintInventory(season, density, rawConstants, 1);
-            
-
+        
         }
 
     }

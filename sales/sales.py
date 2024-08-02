@@ -3,8 +3,8 @@ from eth_utils import to_checksum_address
 import json
 
 # List of CSV file paths
-csv_files = ['2ndDensityDrop.csv']
-output_file_path = '2ndDensityDrop.json'
+csv_files = ['peace.csv']
+output_file_path = 'peace.json'
 
 # Dictionary to store the cumulative quantity for each address
 address_quantity = {}

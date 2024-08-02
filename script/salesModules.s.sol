@@ -24,25 +24,25 @@ contract saleScript is Script {
 
     NFT_Minter MINTER = NFT_Minter(0x913b55d1ad953B9D7fe2f78Ff844ADDd74CEeF3f);
     uint256 season = 1;
-    uint256 density = 3; //TODO
+    uint256 density = 1; //TODO
 
     function setUp() public {}
 
     function run() public {
 
-        _mint("/sales/d4_sales.json"); //TODO
+        _mint("/sales/npcguild.json"); //TODO
 
     }
 
     function _mint(string memory _path) public {
 
-        uint256 completeJSON = 4; //TODO
+        uint256 completeJSON = 13; //TODO
 
         uint256 users_length = completeJSON; //TODO
 
         uint256 json_lastCount = 1;  // can stay the same because we check quantity of NFTs minted
 
-        console.log("json_lastCount: ", completeJSON - json_lastCount);
+        //console.log("json_lastCount: ", completeJSON - json_lastCount);
 
         string memory root = vm.projectRoot();
         string memory path;
