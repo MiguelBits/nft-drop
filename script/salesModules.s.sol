@@ -45,16 +45,16 @@ contract saleScript is Script {
 
         uint256 users_length = completeJSON; //TODO
 
-        uint256 json_lastCount = 3;  // can stay the same because we check quantity of NFTs minted
+        uint256 json_lastCount = 6;  // can stay the same because we check quantity of NFTs minted
 
         //console.log("json_lastCount: ", completeJSON - json_lastCount);
-
+/*
         string memory root = vm.projectRoot();
         string memory path;
         
         path = string.concat(root, _path);
         string memory json = vm.readFile(path);
-
+*/
         for (uint index = json_lastCount; index <= users_length; index++) {
  /*
             console.log("index: ", index);
@@ -66,13 +66,12 @@ contract saleScript is Script {
             console.log("user: ", rawConstants.user);
             console.log("qt: ",  rawConstants.qt);
 */
-            vm.startBroadcast();
+            vm.broadcast();
             //MINTER.batchMintInventory(season, density, rawConstants.user, rawConstants.qt);
             NFT_CONTRACT.safeTransferFrom(
                 0x027a5cE58fc466D0e3A9D1990404354029398541, 
                 0xE114971Feb40f2645eAD061d4628906f7b912f61, 
                 index);
-            vm.stopBroadcast();
         }
 
     }
