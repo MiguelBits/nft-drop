@@ -11,6 +11,10 @@ interface NFT_Minter {
     function balanceOf(address account) external view returns (uint256);
 }
 
+interface NFT {
+    function safeTransferFrom(address from, address to, uint256 tokenId) external;
+}
+
 contract saleScript is Script {
     using stdJson for string;
 
@@ -23,6 +27,7 @@ contract saleScript is Script {
     }
 
     NFT_Minter MINTER = NFT_Minter(0x913b55d1ad953B9D7fe2f78Ff844ADDd74CEeF3f);
+    NFT NFT_CONTRACT = NFT(0x66705a07fa726e19BB132c8d8BEcBe6713670160);
     uint256 season = 1;
     uint256 density = 1; //TODO
 
@@ -36,11 +41,11 @@ contract saleScript is Script {
 
     function _mint(string memory _path) public {
 
-        uint256 completeJSON = 13; //TODO
+        uint256 completeJSON = 33; //TODO
 
         uint256 users_length = completeJSON; //TODO
 
-        uint256 json_lastCount = 1;  // can stay the same because we check quantity of NFTs minted
+        uint256 json_lastCount = 3;  // can stay the same because we check quantity of NFTs minted
 
         //console.log("json_lastCount: ", completeJSON - json_lastCount);
 
@@ -51,7 +56,7 @@ contract saleScript is Script {
         string memory json = vm.readFile(path);
 
         for (uint index = json_lastCount; index <= users_length; index++) {
- 
+ /*
             console.log("index: ", index);
 
             string memory indexString = string.concat(".",Strings.toString(index));
@@ -60,11 +65,14 @@ contract saleScript is Script {
 
             console.log("user: ", rawConstants.user);
             console.log("qt: ",  rawConstants.qt);
-
-            vm.broadcast();
-            MINTER.batchMintInventory(season, density, rawConstants.user, rawConstants.qt);
-            
-
+*/
+            vm.startBroadcast();
+            //MINTER.batchMintInventory(season, density, rawConstants.user, rawConstants.qt);
+            NFT_CONTRACT.safeTransferFrom(
+                0x027a5cE58fc466D0e3A9D1990404354029398541, 
+                0xE114971Feb40f2645eAD061d4628906f7b912f61, 
+                index);
+            vm.stopBroadcast();
         }
 
     }
